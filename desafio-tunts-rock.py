@@ -6,7 +6,7 @@ from math import ceil
 def authenticate_google_sheets():
     scope = ['https://spreadsheets.google.com/feeds',
              'https://www.googleapis.com/auth/drive']
-    creds = service_account.Credentials.from_service_account_file('./assets/json/credential-file.json', scope=scope)
+    creds = service_account.Credentials.from_service_account_file('/assets/json/credential-file.json', scope=scope)
     client = gspread.authorize(creds)
     return client
 
